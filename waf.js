@@ -31,7 +31,7 @@ class wafnodejs {
         *** 2. user-agent
         *** 3. referer (dev)
         *****************************/
-        let state
+        let state = false
         let msg = ''
 
         if(this.enabledCheck['sqlInjection']) {
@@ -40,7 +40,7 @@ class wafnodejs {
                 msg += 'SQLi detected on x-forwarded-for'+'\n'
             } 
             if(regexSQL(request.headers['user-agent'])) {
-                state = (state) ? true : false
+                state = true
                 msg += 'SQLi detected on user-agent'+'\n'
             } 
             if(msg === '') {

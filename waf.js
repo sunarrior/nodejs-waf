@@ -42,7 +42,13 @@ class wafnodejs {
             if(regexSQL(request.headers['user-agent'])) {
                 state = true
                 msg += 'SQLi detected on user-agent'+'\n'
-            } 
+            }
+            for(const prop of Object.keys(request.body)) {
+                if(regexSQL(request.body[prop])) {
+                    msg += `SQLi detected on ${prop}`;
+                    state = true;
+                }
+            }
             if(msg === '') {
                 state = false
                 msg += 'SQLi not detected'

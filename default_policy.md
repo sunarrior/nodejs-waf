@@ -1,4 +1,6 @@
-```# Flush rules and delete custom chains
+``` 
+# Run with Root
+# Flush rules and delete custom chains
 iptables -F
 iptables -X
 

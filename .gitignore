@@ -1,0 +1,4 @@
+node_modules/
+script.py
+.env
+setup_iptables.md

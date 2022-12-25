@@ -31,6 +31,7 @@ $ cd nodejs-waf
 $ npm install
 $ node src/app
 ```
+### [Follow settings in the configuration](default_policy.md)
 License
 ----
 

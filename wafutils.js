@@ -111,7 +111,7 @@ async function RedisCache(client, event) {
 }
 
 function BotTele(event, checkpointObj) {
-	const API_TOKEN = '5812908454:AAEyhEB8BFfPU3NP9ldlUivOQsT0fUyox1g';
+	const API_TOKEN = '--';
 	const bot = new Telegraf(API_TOKEN);
 	const chat_Id = '5258842125';
 	const Phu_id = '1556668931';
